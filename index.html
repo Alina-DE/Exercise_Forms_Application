@@ -3,45 +3,200 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
-
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DropDown + Forms</title>
+    <!-- Google fonts  -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <!-- Fontawesome 4.7 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
     <link rel="stylesheet" href="style.css">
-
-	<title>El Amigo Pub + Grill</title>
 </head>
+
 <body>
+    <!-- Navigation - dropdown menu -->
+    <nav>
+        <img src="images/logo.png" alt="logo">
+
+        <div>
+            <!-- 1st link -->
+            <div class="link"><a href="#">Home</a></div>
+
+            <!-- 2nd link -->
+            <div class="link">
+                <a href="#">About Me <i class="fa fa-angle-down"></i></a>
+                <div class="dropdown">
+                    <a href="#">Experience</a>
+                    <a href="#">Portfolio</a>
+                    <a href="#">Education</a>
+                </div>
+            </div>
+
+            <!-- 3rd link -->
+            <div class="link">
+                <a href="#">Services <i class="fa fa-angle-down"></i></a>
+                <div class="dropdown">
+                    <a href="#">Web Designing</a>
+
+                    <div>
+                        <a href="#">Marketing <i class="fa fas fa-angle-right"></i></a>
+                        <div class="sub-dropdown">
+                            <a href="#">SEO</a>
+                            <a href="#">Social Media</a>
+                            <a href="#">E-Mail Marketing</a>
+                        </div>
+                    </div>
+
+                    <a href="#">Mobile App</a>
+                </div>
+            </div>
+
+            <!-- 4th link -->
+            <div class="link"><a href="#">Clients</a></div>
+
+            <!-- 5th link -->
+            <div class="link"><a href="#">Pricing</a></div>
+
+            <!-- 6th link -->
+            <div class="link"><a href="#">Training</a></div>
+
+            <!-- 7th link -->
+            <div class="link"><a href="#">Contact</a></div>
+        </div>
+    </nav>
+    
+    <!-- Form -->
     <main>
         <header>
-            <a href="#"><img src="images/logo.png" alt=""></a>
+            <h2>Training Application Form</h2>
         </header>
 
-        <div>
-            <h1>The Best Craft Beer in Spain!</h1>
-            <p>Bienvenido, amigos! We are completely fictional location. But that does not mean we can't imagine the best beer in Spain!</p>
-        </div>
+        <form action="#">
 
-        <div>
-            <h2>Make a reservation</h2>
-            <p>Get your spot before somebody else does!</p>
+            <!-- 1st field -->
+            <fieldset>
+                <legend>Applicant Details</legend>
 
-            <form action="">
-                <label for="name">Your name</label>
-                <input type="text" id="name" placeholder="John B. Goode" required>
+                <div class="hover">
+                    <label for="name">Name</label>
+                    <input type="text" name="fname" id="name" placeholder="First">
+                    <input type="text" name="lname" id="name" placeholder="Last">
+                </div>
 
-                <label for="email">Your email</label>
-                <input type="email" id="email" placeholder="John.Goode@gmail.com" required>
+                <div class="hover">
+                    <label for="tel">Phone</label>
+                    <input type="tel" name="tel" id="tel">
+                </div>
 
-                <label for="time">Reservation time</label>
-                <input type="datetime-local" id="time" required>
+                <div class="hover">
+                    <label for="fax">Fax</label>
+                    <input type="tel" name="fax" id="fax">
+                </div>
 
-                <button type="submit">Reserve Now</button>
-            </form>
-        </div>
+                <div class="hover">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email">
+                </div>
 
-        <footer>
-            ©2020 - 🍻 El Amigo
-        </footer>
+                <div class="hover">
+                    <label for="company">Company Name</label>
+                    <input type="text" name="company" id="company">
+                </div>
+
+                <div class="hover">
+                    <label for="address">Address</label>
+                    <input type="text" name="address1" id="address" placeholder="address">
+                    <input type="text" name="address2" id="address" placeholder="address line 2">
+                    <input type="text" name="city" id="address" placeholder="City">
+                    <input type="text" name="region" id="address" placeholder="Region">
+                    <input type="text" name="zip" id="address" placeholder="Postal / Zip code">
+
+                    <select name="country" id="country">
+                        <option value="country" selected>Country</option>
+                        <option value="italy">Italy</option>
+                        <option value="germany">Germany</option>
+                        <option value="france">France</option>
+                        <option value="england">England</option>
+                        <option value="usa">USA</option>
+                    </select>
+                </div>
+
+            </fieldset>
+
+            <!-- 2nd field -->
+            <fieldset>
+                <Legend>Course Details</Legend>
+
+                <div class="hover">
+                    <label for="coursecode">Course Code</label>
+                    <input type="text" name="coursecode" id="coursecode">
+                </div>
+
+                <div class="hover">
+                    <label for="location">Location</label>
+                    <input type="text" name="location" id="location">
+                </div>
+
+                <div class="hover">
+                    <label for="startdate">Start Date</label>
+                    <input type="date" name="startdate" id="startdate">
+                </div>
+            </fieldset>
+
+            <!-- 3rd field -->
+            <fieldset>
+                <Legend>Distributor Details</Legend>
+
+                <div class="hover">
+                    <label for="contname">Contact Name</label>
+                    <input type="text" name="contname" id="contname">
+                </div>
+
+                <div class="hover">
+                    <label for="distname">Distributor Name</label>
+                    <input type="text" name="distname" id="distname">
+                </div>
+
+                <div class="hover">
+                    <label for="distaddress">Distributor Address</label>
+                    <input type="text" name="distaddress1" id="distaddress" placeholder="Street address">
+                    <input type="text" name="distaddress2" id="distaddress" placeholder="Street address line 2">
+                    <input type="text" name="distcity" id="distaddress" placeholder="City">
+                    <input type="text" name="distregion" id="distaddress" placeholder="Region">
+                    <input type="text" name="distzip" id="distaddress" placeholder="Postal / Zip code">
+               
+                    <select name="distcountry" id="distaddress">
+                        <option value="country" selected>Country</option>
+                        <option value="russia">Russia</option>
+                        <option value="germany">Germany</option>
+                        <option value="france">France</option>
+                        <option value="armenia">Armenia</option>
+                        <option value="usa">USA</option>
+                    </select>
+                </div>
+
+                <div class="hover">
+                    <label for="disttel">Phone</label>
+                    <input type="tel" name="disttel" id="disttel">
+                </div>
+
+                <div class="hover">
+                    <label for="distfax">Fax</label>
+                    <input type="tel" name="distfax" id="distfax">
+                </div>
+            </fieldset>
+
+            <div>
+                <div>Privacy Policy </div>
+
+                <div>
+                    <input type="checkbox" name="terms" id="terms">
+                    <label for="terms">I agree to the <a href="#">privacy policy.</a></label>
+                </div>
+                
+                <button type="submit">Send</button>
+            </div>
+        </form>
+        
     </main>
-
 </body>
 </html>
